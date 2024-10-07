@@ -1,3 +1,7 @@
+<img width="1279" alt="image" src="https://github.com/user-attachments/assets/37a1f765-85ee-4546-9cff-fdea7f5955db">
+<img width="1280" alt="image" src="https://github.com/user-attachments/assets/243fe180-8507-4756-8897-b901e6cccd62">
+
+
 * [Libraries Used](#libraries-used)
    * [1. **Streamlit (st)**](#1-streamlit-st)
    * [2. **Requests**](#2-requests)
