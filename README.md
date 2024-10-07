@@ -142,4 +142,3 @@ When the "Fetch NSE Data" button is clicked, the following steps occur:
 - **Customization**: Users can customize refresh intervals, and the styling can be adjusted to fit specific design needs.
 
 
-# Option-chain-dashboard
