@@ -1,9 +1,21 @@
-# Documentation for `NSE Option Chain Dashboard` using Streamlit
+* [Libraries Used](#libraries-used)
+   * [1. **Streamlit (st)**](#1-streamlit-st)
+   * [2. **Requests**](#2-requests)
+   * [3. **Pandas (pd)**](#3-pandas-pd)
+   * [4. **Streamlit Autorefresh**](#4-streamlit-autorefresh)
+   * [5. **Plotly Express (px)**](#5-plotly-express-px)
+* [Page Configuration](#page-configuration)
+* [Custom CSS Styling](#custom-css-styling)
+* [Key Functions](#key-functions)
+   * [1. **fetch_nse_data()**](#1-fetch_nse_data)
+   * [2. **find_atm_strike(data)**](#2-find_atm_strikedata)
+   * [3. **display_atm_otm_data(data-selected_strike)**](#3-display_atm_otm_datadata-selected_strike)
+* [Main App Structure (**main()**)](#main-app-structure-main)
+   * [Sidebar Configuration](#sidebar-configuration)
+   * [Data Fetching and Visualization](#data-fetching-and-visualization)
+* [Final Notes](#final-notes)
 
-This document provides an overview of the various components, libraries, and functions used to build the NSE Option Chain Dashboard using Streamlit. It outlines the steps for fetching data, processing, and presenting insights.
-
----
-
+    
 ### Libraries Used
 ```python
 import streamlit as st
