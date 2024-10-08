@@ -38,13 +38,15 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Function to fetch option chain data from NSE
-def fetch_nse_data(index_symbol):
-    url = f'https://www.nseindia.com/api/option-chain-indices?symbol={index_symbol}'
+def fetch_nse_data(symbol="NIFTY"):
+    url = f'https://www.nseindia.com/api/option-chain-indices?symbol={symbol}'
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
         'Accept-Language': 'en-US,en;q=0.9',
         'Accept-Encoding': 'gzip, deflate, br',
-        'Connection': 'keep-alive'
+        'Connection': 'keep-alive',
+        'Referer': 'https://www.nseindia.com/option-chain',
+        'DNT': '1'  # Do Not Track header
     }
 
     session = requests.Session()
@@ -53,9 +55,9 @@ def fetch_nse_data(index_symbol):
     if response.status_code == 200:
         return response.json()
     else:
-        st.error(f"Failed to fetch data from NSE: {response.status_code}")
+        print(f"Failed to fetch data from NSE: {response.status_code}")
         return None
-
+    
 # Function to find ATM strike price
 def find_atm_strike(data):
     nifty_price = data['records']['underlyingValue']
